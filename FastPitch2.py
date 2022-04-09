@@ -22,9 +22,9 @@ from nemo.utils.exp_manager import exp_manager
 
 @hydra_runner(config_path="conf", config_name="fastpitch_align")
 def main(cfg):
-    cfg.train_dataset = "Dataset/train_manifest.json"
-    cfg.validation_datasets = "Dataset/valid_manifest.json"
-    cfg.prior_folder='Dataset/FastPitch_tts_sup_data_folder'
+    #cfg.train_dataset = "Dataset/train_manifest.json"
+    #cfg.validation_datasets = "Dataset/valid_manifest.json"
+    #cfg.prior_folder='Dataset/FastPitch_tts_sup_data_folder'
 
     if hasattr(cfg.model.optim, 'sched'):
         logging.warning("You are using an optimizer scheduler while finetuning. Are you sure this is intended?")
